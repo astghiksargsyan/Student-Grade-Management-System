@@ -11,7 +11,7 @@
             {
                 "course": "Math",
                 "credits": "45",
-                "grade": 77
+                "grade": 88
             }
         ]
     },
@@ -27,6 +27,72 @@
             {
                 "course": "Information",
                 "credits": "45",
+                "grade": null
+            }
+        ]
+    },
+    {
+        "student_id": "b85ade88-4272-4882-af3c-f02f53ab9b14",
+        "name": "Mary",
+        "username": "Mary",
+        "password": "455",
+        "courses": [
+            "Math",
+            "Information"
+        ],
+        "grades": [
+            {
+                "course": "Math",
+                "credits": "45",
+                "grade": null
+            },
+            {
+                "course": "Information",
+                "credits": "45",
+                "grade": null
+            }
+        ]
+    },
+    {
+        "student_id": "edc76b05-32c5-46be-aaa7-3bf2086b2b5d",
+        "name": "Mark",
+        "username": "Mark",
+        "password": "888",
+        "courses": [
+            "Math",
+            "Information"
+        ],
+        "grades": [
+            {
+                "course": "Math",
+                "credits": "45",
+                "grade": null
+            },
+            {
+                "course": "Information",
+                "credits": "45",
+                "grade": null
+            }
+        ]
+    },
+    {
+        "student_id": "a9a41e2b-1e39-47ba-aea1-ac9da320814c",
+        "name": "Astx",
+        "username": "astx",
+        "password": "2525",
+        "courses": [
+            "Math",
+            "Physics"
+        ],
+        "grades": [
+            {
+                "course": "Math",
+                "credits": "45",
+                "grade": null
+            },
+            {
+                "course": "Physics",
+                "credits": "88",
                 "grade": null
             }
         ]

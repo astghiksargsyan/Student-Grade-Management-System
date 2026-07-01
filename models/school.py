@@ -13,11 +13,13 @@ class School:
         School.total_students = len(self.students)
         School.total_courses = len(self.courses)
     def add_student(self):
+        """Registers a new student into the system."""
         student = Student.collect_data()
         print("Student registered successfully!")
         print(student)
         save_to_file(self.students, student)
     def login_function(self):
+        """ Authenticates a student using username and password."""
         login_input = input("Enter your username: ")
         password_input = input("Enter your password: ")
         for stud in self.students:
@@ -26,6 +28,7 @@ class School:
                 return stud
         print("Incorrect login details")
     def search_student(self):
+        """Searches for a student by name"""
         search_input = input("Enter the name of the student: ")
         for stud in self.students:
             if stud["name"] == search_input: 
@@ -35,6 +38,7 @@ class School:
                     f"The grades are: {stud['grades']}\n"
                 )
     def load_all_students(self):
+        """Displays all available students in the system."""
         for stud in self.students:
             print("*"*25)
             print(f"{stud['name']}\n"
@@ -42,14 +46,17 @@ class School:
                 f"The grades are: {stud['grades']}\n"
                 )
     def add_course(self):
+        """ Adds a new course to the system and saves it to storage."""
         course = Course.collect_course_data()
         save_course_to_file(self.courses, course)
         print("Course successfully added!")
     def view_available_courses(self):
+        """Displays all available courses in the system. """
         for course in self.courses:
             print(course)
     
     def assign_grade(self):
+        """Assigns a grade to a specific student for a selected course."""
         stud_username_input = input("Enter the username of the student to assign grade: ")
         found = False
         for stud in self.students:
@@ -65,22 +72,25 @@ class School:
                         print("Course is found, Enter a grade: ")
                         try:
                             grade_input = int(input("Enter a grade: "))
-                            School.validate_grade(grade_input)
+                            if School.validate_grade(grade_input):
+                                course["grade"] = grade_input
+                                break
                         except ValueError:
                             print("Invalid value!! ")
-                        for course in stud["grades"]:
-                            course["grade"] = grade_input
+                            
                 update_student_info(stud)
                 found = True
         if not found:
             print("Student not found")
     @staticmethod
     def validate_grade(grade):
-        if grade >= 0 or grade <= 100:
+        """Grade validation"""
+        if grade >= 0 and grade <= 100:
             return True
         else:
             print("Invlid value")
     def top_students(self):
+        """Displays top 3 students based on average grade calculation."""
         sorted_students = sorted(self.students, key=School.avg, reverse=True)
 
         print("Top 3 students:")
@@ -89,6 +99,7 @@ class School:
     
     @staticmethod
     def avg(stud):
+        """Calculates the average grade of a student."""
         total = 0
         count = 0
         for g in stud["grades"]:
@@ -97,6 +108,7 @@ class School:
                 count += 1
         return total / count if count else 0
     def calculate_gpa(self):
+        """calculating gpa"""
         students = self.students
         stud_name = input("Enter a newm of the student: ")
         for stud in students:

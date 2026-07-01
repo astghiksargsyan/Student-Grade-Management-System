@@ -37,23 +37,34 @@ class Student:
         pass
     @staticmethod
     def choose_available_course(student):
+        """Allows a student to select courses from the available course list."""
         courses = load_courses()
         print("Available courses:")
         for course in courses:
             print(course["name"])
         while True:
-            course_input = input("Choose the course: ")
+            print("Type 'stop' to finish selection.")
+            course_input = input("Choose a course: ")
+            if course_input.lower() == "stop":
+                break
+            selected_course = False
             for course in courses:
                 if course_input.lower() == course["name"].lower():
-                    student.courses.append(course["name"])
-                    student.grades.append({
-                        "course": course["name"],
-                        "credits": course["credits"],
-                        "grade": None
-                    })
-                    print("Course added!")
-                    return
-            print("Invalid course. Try again.")
+                    selected_course = course
+                    break
+            if not selected_course:
+                print("Invalid course. Try again.")
+                continue
+            if selected_course["name"] in student.courses:
+                print("You already selected this course.")
+                continue
+            student.courses.append(selected_course["name"])
+            student.grades.append({
+                "course": selected_course["name"],
+                "credits": selected_course["credits"],
+                "grade": None
+            })
+            print("Course added successfully!")
     def create_single_student(self):
         """Creates dictionary for working with json files"""
         tmp = {}
