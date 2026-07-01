@@ -1,5 +1,5 @@
 import json
-from models.student import Student
+
 STUDENT_LIST = "data/students.json"
 COURSE_LIST = "data/courses.json"
 def load_students():

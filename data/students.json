@@ -36,5 +36,41 @@
                 "Math": "75"
             }
         ]
+    },
+    {
+        "student_id": "874f1642-6c43-44f6-a822-d6492507b6c5",
+        "name": "Mary",
+        "username": "Mary",
+        "password": "444",
+        "courses": [],
+        "grades": []
+    },
+    {
+        "student_id": "f94b8222-2d14-4cd9-91e9-8dc8c8f4779b",
+        "name": "Ann",
+        "username": "Ann",
+        "password": "4444",
+        "courses": [
+            "Math"
+        ],
+        "grades": [
+            "45"
+        ]
+    },
+    {
+        "student_id": "8ace94fc-f7d0-4ea0-a66c-785be76face4",
+        "name": "Arsen",
+        "username": "Arsen",
+        "password": "444",
+        "courses": [
+            "Information"
+        ],
+        "grades": [
+            {
+                "course": "Information",
+                "credits": "45",
+                "grade": null
+            }
+        ]
     }
 ]

@@ -5,7 +5,7 @@ school = School()
 
 init_options = (
     ("1", "Login", school.login_function),
-    ("2", "Register", school.add_student),  # this is an add student
+    ("2", "Add Student", school.add_student),
     ("3", "Search Student", school.search_student),
     ("4", "Filter Students", school.top_students),
     ("5", "View Students", school.load_all_students), 
