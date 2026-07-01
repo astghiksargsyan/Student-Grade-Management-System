@@ -13,5 +13,10 @@
         "course_code": "b65f053a-adc3-485a-a0c1-2f8ae5a84a39",
         "name": "Information",
         "credits": "45"
+    },
+    {
+        "course_code": "f8219898-0968-4886-9e04-7f710787f989",
+        "name": "chemistry",
+        "credits": 75
     }
 ]

@@ -1,1 +1,6 @@
-Number of students in school Ani: GPA = 84.33
+School Report
+*************************
+Number of courses: 3
+Number of students: 3
+
+Jhon: GPA = 75.00

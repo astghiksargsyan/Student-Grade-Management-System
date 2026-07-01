@@ -15,6 +15,7 @@ class Student:
         course = input("Choose the course: ")
         return cls(name, username, password)
     def create_single_student(self):
+        """Creates dictionary for working with json files"""
         tmp = {}
         tmp["student_id"] = self.student_id
         tmp["name"] = self.name
@@ -23,11 +24,14 @@ class Student:
         tmp["courses"] = self.courses
         tmp["grades"] = self.grades
         return tmp 
-
-
     def __str__(self):
+        """Return a human-readable string representation of the studnet."""
         return (f"Name of the: {self.name} \n"
                 f"Username: {self.username} \n"
                 f"Courses: {self.courses} \n"
                 f"Grades: {self.grades} \n")
+
+    def __repr__(self):
+        """Return the official string representation of student."""
+        return self.__str__()
 

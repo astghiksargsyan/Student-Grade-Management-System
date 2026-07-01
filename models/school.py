@@ -6,11 +6,12 @@ from utils.file_operations import update_student_info
 from utils.file_operations import load_courses
 from utils.file_operations import save_course_to_file
 class School:
-    total_students = 0         
-    average_performance = 0  
+    #average_performance = 0  
     def __init__(self):
         self.students = load_students()
         self.courses = load_courses()  
+        School.total_students = len(self.students)
+        School.total_courses = len(self.courses)
     def add_student(self):
         student = Student.collect_data()
         print("Student registered successfully!")
