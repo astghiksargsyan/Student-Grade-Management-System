@@ -48,29 +48,45 @@ class School:
     def view_available_courses(self):
         for course in self.courses:
             print(course)
+    
     def assign_grade(self):
         stud_username_input = input("Enter the username of the student to assign grade: ")
         found = False
         for stud in self.students:
             if stud_username_input == stud["username"]:
-                print("Student is found, Enter a grade: ")
+                print("Student is found, Enter a course name: ")
+                print("Available courses: ")
+                for availavle_course in stud["courses"]:
+                    print(availavle_course)
                 course_input = input("Enter a course to asigne grade: ")
-                print("Course is found, Enter a grade: ")
-                grade_input = input("Enter a grade: ")
-                for course in self.courses:
-                    if course["name"] == course_input:
-                        stud["grades"].append({course["name"] : grade_input})
+                for course in stud["grades"]:
+                    print("courses", course)
+                    if course["course"] == course_input:       
+                        print("Course is found, Enter a grade: ")
+                        try:
+                            grade_input = int(input("Enter a grade: "))
+                            School.validate_grade(grade_input)
+                        except ValueError:
+                            print("Invalid value!! ")
+                        for course in stud["grades"]:
+                            course["grade"] = grade_input
                 update_student_info(stud)
                 found = True
         if not found:
             print("Student not found")
+    @staticmethod
+    def validate_grade(grade):
+        if grade >= 0 or grade <= 100:
+            return True
+        else:
+            print("Invlid value")
     def top_students(self):
         sorted_students = sorted(self.students, key=School.avg, reverse=True)
 
         print("Top 3 students:")
         for stud in sorted_students[:3]:
             print(stud["name"], School.avg(stud))
-
+    
     @staticmethod
     def avg(stud):
         total = 0

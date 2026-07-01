@@ -1,5 +1,4 @@
 import uuid
-import json
 from utils.file_operations import load_courses
 from utils.file_operations import load_students
 
@@ -33,6 +32,9 @@ class Student:
             if student["username"].lower() == username.lower():
                 return True
         return False
+    @staticmethod
+    def password_validation(password):
+        pass
     @staticmethod
     def choose_available_course(student):
         courses = load_courses()

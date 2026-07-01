@@ -1,66 +1,24 @@
 [
     {
-        "student_id": "f110867f-306b-4e95-98b3-d760366d1b73",
+        "student_id": "524c1a1e-2e76-4b9a-a219-94fc397fb664",
         "name": "Ani",
         "username": "ani",
         "password": "123",
-        "courses": [],
-        "grades": [
-            {
-                "Course": "77"
-            },
-            {
-                "Course": "99"
-            },
-            {
-                "Math": "77"
-            }
-        ]
-    },
-    {
-        "student_id": "d1e2db61-0422-4589-b7c3-203f3ef4bfa5",
-        "name": "Armen",
-        "username": "armen",
-        "password": "444",
-        "courses": [],
-        "grades": []
-    },
-    {
-        "student_id": "f5d1298b-fc6e-4b73-86cb-7830d1f88185",
-        "name": "Jhon",
-        "username": "Jhon",
-        "password": "123",
-        "courses": [],
-        "grades": [
-            {
-                "Math": "75"
-            }
-        ]
-    },
-    {
-        "student_id": "874f1642-6c43-44f6-a822-d6492507b6c5",
-        "name": "Mary",
-        "username": "Mary",
-        "password": "444",
-        "courses": [],
-        "grades": []
-    },
-    {
-        "student_id": "f94b8222-2d14-4cd9-91e9-8dc8c8f4779b",
-        "name": "Ann",
-        "username": "Ann",
-        "password": "4444",
         "courses": [
             "Math"
         ],
         "grades": [
-            "45"
+            {
+                "course": "Math",
+                "credits": "45",
+                "grade": 77
+            }
         ]
     },
     {
-        "student_id": "8ace94fc-f7d0-4ea0-a66c-785be76face4",
-        "name": "Arsen",
-        "username": "Arsen",
+        "student_id": "ab3f2cf7-1e65-49be-af22-117ad2330806",
+        "name": "Jhon",
+        "username": "jhon",
         "password": "444",
         "courses": [
             "Information"
