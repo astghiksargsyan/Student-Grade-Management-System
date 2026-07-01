@@ -1,0 +1,17 @@
+[
+    {
+        "course_code": "06e4929c-8a2b-4b57-a6f5-fde318bc30da",
+        "name": "Math",
+        "credits": "45"
+    },
+    {
+        "course_code": "89e5a0f5-6161-45d4-99f8-7b54b8238066",
+        "name": "Physics",
+        "credits": "88"
+    },
+    {
+        "course_code": "b65f053a-adc3-485a-a0c1-2f8ae5a84a39",
+        "name": "Information",
+        "credits": "45"
+    }
+]

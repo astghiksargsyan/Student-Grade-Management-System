@@ -1,0 +1,40 @@
+[
+    {
+        "student_id": "f110867f-306b-4e95-98b3-d760366d1b73",
+        "name": "Ani",
+        "username": "ani",
+        "password": "123",
+        "courses": [],
+        "grades": [
+            {
+                "Course": "77"
+            },
+            {
+                "Course": "99"
+            },
+            {
+                "Math": "77"
+            }
+        ]
+    },
+    {
+        "student_id": "d1e2db61-0422-4589-b7c3-203f3ef4bfa5",
+        "name": "Armen",
+        "username": "armen",
+        "password": "444",
+        "courses": [],
+        "grades": []
+    },
+    {
+        "student_id": "f5d1298b-fc6e-4b73-86cb-7830d1f88185",
+        "name": "Jhon",
+        "username": "Jhon",
+        "password": "123",
+        "courses": [],
+        "grades": [
+            {
+                "Math": "75"
+            }
+        ]
+    }
+]
